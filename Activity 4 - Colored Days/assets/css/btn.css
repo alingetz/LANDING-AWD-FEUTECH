@@ -1,0 +1,223 @@
+* {
+
+    box-sizing: border-box;
+}
+
+#Monday{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    right: 20%;
+    border: 10px solid white;
+    bottom: 100%;
+    background-color: blueviolet;
+    transition: background-color 0.4s ease-in-out;
+}
+
+
+#Tuesday{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    right: 20%;
+    border: 10px solid white;
+    bottom: 100%;
+    background-color: violet;
+    transition: background-color 0.4s ease-in-out;
+}
+
+#Wednesday{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    right: 20%;
+    border: 10px solid white;
+    bottom: 100%;
+    background-color: blue;
+    transition: background-color 0.4s ease-in-out;
+}
+
+#Thursday{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    right: 20%;
+    border: 10px solid white;
+    bottom: 100%;
+    background-color: greenyellow;
+    transition: background-color 0.4s ease-in-out;
+}
+
+#Friday{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    right: 20%;
+    border: 10px solid white;
+    bottom: 100%;
+    background-color: yellow;
+    transition: background-color 0.4s ease-in-out;
+}
+
+#Saturday{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    right: 20%;
+    border: 10px solid white;
+    bottom: 100%;
+    background-color: orange;
+    transition: background-color 0.4s ease-in-out;
+}
+
+#Sunday{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    right: 20%;
+    border: 10px solid white;
+    bottom: 100%;
+    background-color: red;
+    transition: background-color 0.4s ease-in-out;
+}
+
+button {
+    font-weight: 900;
+    padding: 20px;
+    display: block;
+    border-radius: 30px;
+    width: 250px;
+    margin: 30px;
+    margin-top: 10px;
+    position:relative;
+    background-color: var(--button-color); /* Dynamic button color */
+    color: #F5F5DC;
+    border: none;
+    cursor: pointer;
+    box-shadow: rgb(210, 204, 183) -3px 5px 5px;
+    transition: box-shadow 0.4s ease-in-out;
+
+}
+
+button:hover {
+    text-transform: lowercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    scale: 1.1;
+    box-shadow: rgb(65, 39, 10) 0px 0px 0px;
+    padding: 20px;
+    width: 170px;
+    transition: all 0.5s ease-in-out;
+}
+
+button:after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+}
+
+button:hover:after {
+    bottom: 2px;
+    left: 2px;
+}
+
+@media (min-width: 768px) {
+    button {
+        padding: .75rem 3rem;
+        font-size: 1.25rem;
+    }
+}
+
+.button-1 { --button-color: blueviolet; }
+.button-2 { --button-color: rgb(215, 107, 152); }
+.button-3 { --button-color: rgb(38, 86, 206); }
+.button-4 { --button-color: rgb(57, 147, 69); }
+.button-5 { --button-color: rgb(230, 230, 76); }
+.button-6 { --button-color: orange; }
+.button-7 { --button-color: red; }
+
+.button-1:hover{ --button-color: rgb(85, 8, 86); }
+.button-2:hover{ --button-color: rgb(132, 7, 61); }
+.button-3:hover{ --button-color: rgb(7, 61, 132); }
+.button-4:hover{ --button-color: rgb(5, 105, 7); }
+.button-5:hover{ --button-color: rgb(227, 227, 9); }
+.button-6:hover{ --button-color: rgb(198, 97, 8); }
+.button-7:hover{ --button-color: rgb(152, 4, 4); }
+
+.falling-images {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.falling-bg {
+    position: absolute;
+    width: 150px;
+    opacity: 0.9;
+    animation: fall linear infinite;
+    animation-duration: var(--fall-duration);
+}
+
+.falling-bg:nth-child(1) { --fall-duration: 15s; }
+.falling-bg:nth-child(2) { --fall-duration: 5s; }
+.falling-bg:nth-child(3) { --fall-duration: 6s; }
+.falling-bg:nth-child(4) { --fall-duration: 6s; }
+.falling-bg:nth-child(5) { --fall-duration: 13s; }
+.falling-bg:nth-child(6) { --fall-duration: 8s;}
+.falling-bg:nth-child(7) { --fall-duration: 14s; }
+.falling-bg:nth-child(8) { --fall-duration: 9s; }
+.falling-bg:nth-child(9) { --fall-duration: 5s; }
+.falling-bg:nth-child(10){ --fall-duration: 14s; }
+.falling-bg:nth-child(11) { --fall-duration: 19s;}
+.falling-bg:nth-child(12) { --fall-duration: 8s; }
+.falling-bg:nth-child(13) { --fall-duration: 10s; }
+.falling-bg:nth-child(14) { --fall-duration: 6s; }
+.falling-bg:nth-child(15) { --fall-duration: 8s; }
+.falling-bg:nth-child(16) { --fall-duration: 10s; }
+.falling-bg:nth-child(17) { --fall-duration: 12s; }
+.falling-bg:nth-child(18) { --fall-duration: 15s;}
+.falling-bg:nth-child(19) { --fall-duration: 4s; }
+.falling-bg:nth-child(20) { --fall-duration: 13s; }
+.falling-bg:nth-child(21) { --fall-duration: 8s; }
+.falling-bg:nth-child(22){ --fall-duration: 10s; }
+.falling-bg:nth-child(23) { --fall-duration: 12s;}
+.falling-bg:nth-child(24) { --fall-duration: 15s; }
+
+.falling-bg:nth-child(1) { left: 10%; }
+.falling-bg:nth-child(2) { left: 30%; }
+.falling-bg:nth-child(3) { left: 40%; }
+.falling-bg:nth-child(4) { left: 80%; }
+.falling-bg:nth-child(5) { left: 40%; }
+.falling-bg:nth-child(6) { left: 40%; }
+.falling-bg:nth-child(7) { left: 40%; }
+.falling-bg:nth-child(8) { left: 70%; }
+.falling-bg:nth-child(9) { left: 40%; }
+.falling-bg:nth-child(10){ left: 20%; }
+.falling-bg:nth-child(11) { left: 30%; }
+.falling-bg:nth-child(12) { left: 70%; }
+.falling-bg:nth-child(13) { left: 80%; }
+.falling-bg:nth-child(14) { left: 30%; }
+.falling-bg:nth-child(15) { left: 10%; }
+.falling-bg:nth-child(16) { left: 80%; }
+.falling-bg:nth-child(17) { left: 40%; }
+.falling-bg:nth-child(18) { left: 90%; }
+.falling-bg:nth-child(19) { left: 40%; }
+.falling-bg:nth-child(20) { left: 60%; }
+.falling-bg:nth-child(21) { left: 40%; }
+.falling-bg:nth-child(22){ left: 20%; }
+.falling-bg:nth-child(23) { left: 80%; }
+.falling-bg:nth-child(24) { left: 20%; }
+
+
+@keyframes fall {
+    0% { transform: translateY(-100%) rotate(0deg); }
+    100% { transform: translateY(100vh) rotate(360deg); }
+}

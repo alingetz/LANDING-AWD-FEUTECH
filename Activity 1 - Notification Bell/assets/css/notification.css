@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #333133, rgb(247, 125, 176));
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button{
+    cursor:pointer;
+    border: none;
+    outline: none;
+    background: pink;
+    font-size: 1rem;
+    color: black;
+    margin: 1rem;
+    padding: 1rem 2rem;
+    box-shadow: 5px 5px 0 black;
+    z-index: 1;
+    transition: 0.5s;
+    text-align: center;
+    border-radius:10px;
+    
+
+    &.active{
+        transform: translate(5%,5%);
+        box-shadow: 0px 0px 0 pink;
+    }
+
+}
+
+.notification{
+    width: 10px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    height: inherit;
+    position: relative;
+    color: transparent;
+
+    &::after{
+        min-width:20px;
+        height: 20px;
+        border-radius: 50%;
+        content: attr(data-count);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: palevioletred;
+        position: absolute;
+        top: -5px;
+        right: 5px;
+        transition: 0.3s;
+        opacity: 0;
+        transform:scale(.5)
+
+    }
+
+    &::before{
+        content: "\f0f3";
+        font-family: "Font Awesome 5 Free";
+        display: block;
+        color: rgb(255, 255, 255);
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    &.count::after{
+        opacity: 1;
+        transform:scale(1)
+    }
+
+    &.notify::before{
+        animation: bell is ease-in-out;
+    }
+
+
+@keyframes bell {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(15deg);
+    }
+    50%{
+        transform: rotate(-15deg);
+    }
+    75%{
+        transform: rotate(15deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+}
+

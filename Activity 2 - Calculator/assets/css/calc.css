@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box #ab8a8e;
+    font-family: sans-serif;
+    outline: none;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 100%;
+    background-attachment: cover;
+}
+
+.calculator {
+    background-color: #ffff;
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: inset 5px 5px 12px #ffffff, 
+        5px 5px 12px rgba(0, 0, 0, .16);
+    display: grid;
+    grid-template-columns: repeat(4, 68px);
+}
+
+input{
+    border-color: #ab8a8e;
+    border: 1px;
+    grid-column: span 4;
+    height: 80px;
+    width: 230px;
+    position: relative;
+    background-color: #fcf9fd;
+    box-shadow: inset -5px -5px 12px #ffffff, 
+        inset 5px 5px 12px rgba(0, 0, 0, .16);
+    border: none;
+    border-radius: 30px;
+    color: rgb(70, 70, 70);
+    text-align: end;
+    font-size: 24px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+button{
+    height: 48px;
+    width: 48px;
+    background-color: #f7d1d6;
+    box-shadow: inset -5px -5px 12px #ffffff, 
+        5px 5px 12px rgba(0, 0, 0, .16);
+    border: 0.5px solid #f3d1d5;
+    border-radius: 50%;
+    margin: 8px;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Added transition effect */
+
+    &:hover {
+        background-color: #d7c8ca; /* Change color on hover */
+    }
+
+    &:active {
+        background-color: #d7c8ca; /* Change color when clicked */
+    }
+}
+
+
+
+.equal {
+    grid-column: span 1; /* Adjusted to span 1 column */
+    grid-row: span 2; /* Adjusted to span 3 rows for a taller button */
+    width: 48px; /* Adjusted width for a vertical button */
+    height: 115px; 
+    border-radius: 40px;
+    background-color: #ecf0f3;
+    box-shadow: -5px -5px 12px #ffffff, 
+        5px 5px 12px rgba(0, 0, 0, .16);
+    margin-top: -80%;
+    margin-right: 100px;
+}
